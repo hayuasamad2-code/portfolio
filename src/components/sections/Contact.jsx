@@ -3,19 +3,33 @@ import { motion } from 'framer-motion';
 import { Send, Mail, MapPin, Phone } from 'lucide-react';
 import SectionHeading from '../ui/SectionHeading';
 import Button from '../ui/Button';
+import { API_URL } from '../../config';
 
 const Contact = () => {
-    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+    const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
     const [status, setStatus] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('sending');
-        // Simulate API call
-        setTimeout(() => {
-            setStatus('success');
-            setFormData({ name: '', email: '', message: '' });
-        }, 1500);
+        try {
+            const response = await fetch(`${API_URL}/api/contact/submit`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+            
+            if (response.ok) {
+                setStatus('success');
+                setFormData({ name: '', email: '', subject: '', message: '' });
+                setTimeout(() => setStatus(''), 3000);
+            } else {
+                setStatus('error');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            setStatus('error');
+        }
     };
 
     return (
@@ -94,6 +108,17 @@ const Contact = () => {
                                 </div>
                             </div>
                             <div className="space-y-2">
+                                <label className="text-sm font-bold text-neutral-500 uppercase tracking-widest ml-1">Subject</label>
+                                <input
+                                    type="text"
+                                    required
+                                    value={formData.subject}
+                                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                                    placeholder="Project inquiry"
+                                    className="w-full bg-neutral-900 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary outline-none transition-colors"
+                                />
+                            </div>
+                            <div className="space-y-2">
                                 <label className="text-sm font-bold text-neutral-500 uppercase tracking-widest ml-1">Message</label>
                                 <textarea
                                     rows="5"
@@ -118,6 +143,11 @@ const Contact = () => {
                             {status === 'success' && (
                                 <p className="text-green-400 text-center mt-4 font-medium animate-bounce">
                                     Message sent successfully! I'll get back to you soon.
+                                </p>
+                            )}
+                            {status === 'error' && (
+                                <p className="text-red-400 text-center mt-4 font-medium">
+                                    Failed to send message. Please try again.
                                 </p>
                             )}
                         </form>

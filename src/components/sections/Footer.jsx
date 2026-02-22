@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Twitter, Linkedin, Heart } from 'lucide-react';
+import { Github, Twitter, Linkedin, Heart, Facebook, Instagram } from 'lucide-react';
+import { socialLinks } from '../../data/content';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -19,14 +20,20 @@ const Footer = () => {
                     </div>
 
                     <div className="flex gap-6">
-                        <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-primary transition-all">
+                        <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-primary transition-all">
                             <Github className="w-5 h-5" />
                         </a>
-                        <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-primary transition-all">
-                            <Twitter className="w-5 h-5" />
-                        </a>
-                        <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-primary transition-all">
+                        <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-primary transition-all">
                             <Linkedin className="w-5 h-5" />
+                        </a>
+                        <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-primary transition-all">
+                            <Facebook className="w-5 h-5" />
+                        </a>
+                        <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-primary transition-all">
+                            <Instagram className="w-5 h-5" />
+                        </a>
+                        <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-primary transition-all">
+                            <Twitter className="w-5 h-5" />
                         </a>
                     </div>
                 </div>

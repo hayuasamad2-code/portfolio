@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MousePointer2, ArrowRight, Github, Twitter, Linkedin, Download } from 'lucide-react';
-import { heroContent } from '../../data/content';
+import { MousePointer2, ArrowRight, Github, Twitter, Linkedin, Download, Facebook, Instagram } from 'lucide-react';
+import { heroContent, socialLinks } from '../../data/content';
 import Button from '../ui/Button';
 
 const Hero = () => {
@@ -73,9 +73,21 @@ const Hero = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1 }}
                 >
-                    <Github className="w-6 h-6 text-neutral-500 hover:text-white cursor-pointer transition-colors" />
-                    <Twitter className="w-6 h-6 text-neutral-500 hover:text-white cursor-pointer transition-colors" />
-                    <Linkedin className="w-6 h-6 text-neutral-500 hover:text-white cursor-pointer transition-colors" />
+                    <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <Github className="w-6 h-6 text-neutral-500 hover:text-white cursor-pointer transition-colors" />
+                    </a>
+                    <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <Linkedin className="w-6 h-6 text-neutral-500 hover:text-white cursor-pointer transition-colors" />
+                    </a>
+                    <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <Facebook className="w-6 h-6 text-neutral-500 hover:text-white cursor-pointer transition-colors" />
+                    </a>
+                    <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <Instagram className="w-6 h-6 text-neutral-500 hover:text-white cursor-pointer transition-colors" />
+                    </a>
+                    <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <Twitter className="w-6 h-6 text-neutral-500 hover:text-white cursor-pointer transition-colors" />
+                    </a>
                 </motion.div>
             </div>
 

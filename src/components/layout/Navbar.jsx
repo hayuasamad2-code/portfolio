@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Github, Linkedin, Twitter } from 'lucide-react';
-import { navLinks } from '../../data/content';
+import { Menu, X, Github, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+import { navLinks, socialLinks } from '../../data/content';
 import Button from '../ui/Button';
 
 const Navbar = () => {
@@ -87,9 +87,21 @@ const Navbar = () => {
                             ))}
                             <hr className="border-white/5" />
                             <div className="flex gap-4">
-                                <Github className="w-6 h-6 text-neutral-400 hover:text-white cursor-pointer" />
-                                <Linkedin className="w-6 h-6 text-neutral-400 hover:text-white cursor-pointer" />
-                                <Twitter className="w-6 h-6 text-neutral-400 hover:text-white cursor-pointer" />
+                                <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                    <Github className="w-6 h-6 text-neutral-400 hover:text-white cursor-pointer" />
+                                </a>
+                                <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                    <Linkedin className="w-6 h-6 text-neutral-400 hover:text-white cursor-pointer" />
+                                </a>
+                                <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                    <Facebook className="w-6 h-6 text-neutral-400 hover:text-white cursor-pointer" />
+                                </a>
+                                <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                    <Instagram className="w-6 h-6 text-neutral-400 hover:text-white cursor-pointer" />
+                                </a>
+                                <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                    <Twitter className="w-6 h-6 text-neutral-400 hover:text-white cursor-pointer" />
+                                </a>
                             </div>
                         </div>
                     </motion.div>

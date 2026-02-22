@@ -6,6 +6,14 @@ export const navLinks = [
     { name: 'Contact', href: '#contact' },
 ];
 
+export const socialLinks = {
+    github: 'https://github.com/yourusername',
+    linkedin: 'https://linkedin.com/in/hayuasamad',
+    facebook: 'https://facebook.com/hayu.abdusemed',
+    instagram: 'https://instagram.com/hayu_asmd',
+    twitter: 'https://twitter.com/hayu_asmd',
+};
+
 export const heroContent = {
     greeting: "Hi, I'm",
     name: "Hayu Abdusemed",
@@ -72,28 +80,96 @@ export const softSkills = [
 
 export const projects = [
     {
-        title: "Online-based System",
-        description: "Final year project involving comprehensive system analysis, design, and implementation with full documentation.",
-        tags: ["C#", "System Design", "Documentation"],
+        id: 1,
+        title: "Student Fee Management System",
+        category: "Full-Stack Application",
+        description: "A comprehensive full-stack application designed to streamline student fee management with real-time tracking, secure payment processing, and automated notifications.",
+        longDescription: "Built a complete student management system featuring student registration, fee tracking, payment processing, and admin dashboard. The system provides real-time updates on payment status and generates automated notifications.",
+        role: "Full Stack Developer",
+        technologies: ["React", "Node.js", "Express.js", "MongoDB", "JWT Authentication", "Nodemailer"],
+        features: [
+            "Student registration and authentication",
+            "Real-time fee tracking and payment status",
+            "Secure payment processing",
+            "Admin dashboard for fee management",
+            "Automated email notifications",
+            "JWT-based authentication"
+        ],
+        tags: ["Node.js", "Express", "React", "MongoDB", "Full-Stack"],
+        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800",
+        link: "#",
+        github: "#",
+        liveDemo: "#",
+        status: "In Development"
+    },
+    {
+        id: 2,
+        title: "Final Year Project - Online-based System",
+        category: "Enterprise System",
+        description: "Comprehensive final year project involving complete system analysis, design, and implementation with full technical documentation and UML diagrams.",
+        longDescription: "Developed a complete online-based system as the final year capstone project, demonstrating expertise in system design, database architecture, and software engineering principles.",
+        role: "Lead Developer & System Designer",
+        technologies: ["C#", ".NET Framework", "SQL Server", "System Design", "UML Diagrams"],
+        features: [
+            "Complete system analysis and requirements gathering",
+            "Database design and optimization",
+            "Object-oriented architecture",
+            "Comprehensive technical documentation",
+            "UML use case, sequence, and class diagrams",
+            "System testing and validation"
+        ],
+        tags: ["C#", "System Design", "SQL Server", "UML", "Documentation"],
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
         link: "#",
         github: "#",
+        liveDemo: "#",
+        status: "Completed"
     },
     {
-        title: "C# Mini Project",
-        description: "Selected module from final year project demonstrating object-oriented programming principles and C# development skills.",
-        tags: ["C#", "OOP", "Visual Studio"],
-        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
-        link: "#",
-        github: "#",
-    },
-    {
-        title: "Flat Network Design",
-        description: "Networking project utilizing Cisco Packet Tracer to design and simulate a complete flat network topology.",
-        tags: ["Cisco Packet Tracer", "Networking", "IP Addressing"],
+        id: 3,
+        title: "Network Infrastructure Design",
+        category: "Networking Project",
+        description: "Designed and simulated a complete flat network topology using Cisco Packet Tracer, demonstrating expertise in network design and IP addressing.",
+        longDescription: "Created a comprehensive network design project showcasing skills in network topology design, IP addressing, subnetting, and network simulation.",
+        role: "Network Designer",
+        technologies: ["Cisco Packet Tracer", "Network Design", "IP Addressing", "Subnetting", "Network Protocols"],
+        features: [
+            "Flat network topology design",
+            "IP addressing and subnetting configuration",
+            "Network device configuration",
+            "Network simulation and testing",
+            "Documentation and network diagrams",
+            "Troubleshooting and optimization"
+        ],
+        tags: ["Cisco Packet Tracer", "Networking", "IP Addressing", "Network Design"],
         image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
         link: "#",
         github: "#",
+        liveDemo: "#",
+        status: "Completed"
+    },
+    {
+        id: 4,
+        title: "C# Object-Oriented Programming Project",
+        category: "Software Development",
+        description: "Selected module from final year project demonstrating advanced object-oriented programming principles, design patterns, and C# development best practices.",
+        longDescription: "Developed a focused C# module showcasing OOP principles including inheritance, polymorphism, encapsulation, and design patterns.",
+        role: "Software Developer",
+        technologies: ["C#", "Object-Oriented Programming", "Visual Studio", "Design Patterns", ".NET"],
+        features: [
+            "Advanced OOP principles implementation",
+            "Design pattern implementation",
+            "Code optimization and refactoring",
+            "Unit testing",
+            "Clean code practices",
+            "Performance optimization"
+        ],
+        tags: ["C#", "OOP", "Visual Studio", "Design Patterns"],
+        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+        link: "#",
+        github: "#",
+        liveDemo: "#",
+        status: "Completed"
     },
 ];
 
